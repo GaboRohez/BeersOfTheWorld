@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cervezas del mundo</string>
+    <string name="log_in">Iniciar Sesión</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="message_recover_pass">No recuerda su contraseña?</string>
+    <string name="get_it_back">Recuperla</string>
+    <string name="start">Iniciar</string>
+    <string name="message_need_account">No tiene una cuenta?</string>
+    <string name="sign_up">Crear cuenta</string>
+    <string name="retrofit_timeout">Por el momento el servicio no esta disponible, intente de nuevo</string>
+    <string name="retrofit_failure">El tiempo de espera fue exedido, por favor, intente la petición</string>
+</resources>

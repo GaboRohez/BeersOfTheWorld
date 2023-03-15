@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">BeersOfTheWorld</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_in">Log In</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="message_recover_pass">Don\'t remember your password?</string>
+    <string name="get_it_back">Get it back</string>
+    <string name="start">Log In</string>
+    <string name="message_need_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="retrofit_timeout">At the moment the service is not available. Please retry the request</string>
+    <string name="retrofit_failure">The timeout has been exceeded, please retry the request</string>
 </resources>
