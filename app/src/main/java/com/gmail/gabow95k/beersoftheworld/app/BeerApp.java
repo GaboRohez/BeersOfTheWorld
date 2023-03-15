@@ -49,6 +49,10 @@ public class BeerApp extends Application {
         public String getUserCreated() {
             return resources.getString(R.string.user_created);
         }
+
+        public String getRequestConfirmed() {
+            return resources.getString(R.string.request_confirmed);
+        }
     }
 
 }

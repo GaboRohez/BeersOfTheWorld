@@ -14,6 +14,7 @@ import com.gmail.gabow95k.beersoftheworld.databinding.FragmentLoginBinding;
 import com.gmail.gabow95k.beersoftheworld.ui.login.interactor.LogInInteractor;
 import com.gmail.gabow95k.beersoftheworld.ui.login.presenter.LogInContract;
 import com.gmail.gabow95k.beersoftheworld.ui.login.presenter.LogInPresenter;
+import com.gmail.gabow95k.beersoftheworld.ui.reset_password.view.ResetFragment;
 import com.gmail.gabow95k.beersoftheworld.ui.signup.view.SignUpFragment;
 
 public class LogInFragment extends BaseFragment<LogInContract.Presenter, FragmentLoginBinding> implements LogInContract.View {
@@ -40,6 +41,9 @@ public class LogInFragment extends BaseFragment<LogInContract.Presenter, Fragmen
     }
 
     private void setUpEvents() {
+
+        binding.btnRecoverPass.setOnClickListener(v -> addFragment(new ResetFragment(), R.id.contentSession));
+
         binding.btnGoSignup.setOnClickListener(v -> addFragment(new SignUpFragment(), R.id.contentSession));
     }
 }

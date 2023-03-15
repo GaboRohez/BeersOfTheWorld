@@ -24,4 +24,9 @@
     <string name="password_not_same">Password confirmation is not the same</string>
     <string name="common_error">An error occurred, please try again later</string>
     <string name="user_created">User created successfully</string>
+    <string name="recover_your_password">Recover your password</string>
+    <string name="enter_registered_email">Enter registered email</string>
+    <string name="message_to_recover_pass">A link will be sent to your email to recover your password</string>
+    <string name="send">Send</string>
+    <string name="request_confirmed">Request confirmed</string>
 </resources>

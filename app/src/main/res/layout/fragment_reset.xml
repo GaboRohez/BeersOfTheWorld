@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_marginTop="@dimen/dimen60"
+        android:src="@drawable/ic_beer"
+        android:layout_centerHorizontal="true"
+        android:layout_width="110dp"
+        android:layout_height="110dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etEmail"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginStart="@dimen/dimen30"
+        android:layout_marginTop="@dimen/dimen30"
+        android:layout_marginEnd="@dimen/dimen30"
+        android:layout_marginBottom="@dimen/dimen30"
+        android:text="@string/recover_your_password"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etEmail"
+        android:layout_marginStart="@dimen/dimen30"
+        android:layout_marginEnd="@dimen/dimen30"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contentMessage"
+        style="@style/TextInputLayoutOutline"
+        android:layout_centerInParent="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="13sp"
+            android:hint="@string/enter_registered_email" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/contentMessage"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/dimen30"
+        android:text="@string/message_to_recover_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/contentMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dimen30"
+        android:layout_marginTop="@dimen/dimen30"
+        android:layout_marginEnd="@dimen/dimen30"
+        android:text="@string/send"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="16dp" />
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:background="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+</RelativeLayout>
