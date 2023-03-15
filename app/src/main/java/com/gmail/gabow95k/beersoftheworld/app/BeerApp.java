@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.res.Resources;
 
 import com.gmail.gabow95k.beersoftheworld.R;
+import com.gmail.gabow95k.beersoftheworld.data.preferences.PreferencesManager;
 
 public class BeerApp extends Application {
 
@@ -14,6 +15,7 @@ public class BeerApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        PreferencesManager.getInstance(this);
         mContext = getApplicationContext();
         androidResourceManager = new AndroidResourceManager(getResources());
     }
@@ -52,6 +54,18 @@ public class BeerApp extends Application {
 
         public String getRequestConfirmed() {
             return resources.getString(R.string.request_confirmed);
+        }
+
+        public String getInvalidEmail() {
+            return resources.getString(R.string.invalid_email);
+        }
+
+        public String getInvalidUser() {
+            return resources.getString(R.string.invalid_user);
+        }
+
+        public String getSuccess() {
+            return resources.getString(R.string.success);
         }
     }
 

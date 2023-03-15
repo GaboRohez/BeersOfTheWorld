@@ -24,15 +24,22 @@ public class ResetPresenter extends BasePresenter<ResetContract.View> implements
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
+        view.showLoader();
+
         mAuth.sendPasswordResetEmail(email)
                 .addOnCompleteListener(task -> {
+                    view.hideLoader();
+
                     if (task.isSuccessful()) {
                         view.success(BeerApp.androidResourceManager.getRequestConfirmed());
                     } else {
                         view.showErrorDialog(BeerApp.androidResourceManager.getCommonError());
                     }
                 })
-                .addOnFailureListener(e -> view.showErrorDialog(e.getMessage()));
+                .addOnFailureListener(e -> {
+                    view.hideLoader();
+                    view.showErrorDialog(e.getMessage());
+                });
 
     }
 }

@@ -1,6 +1,8 @@
 package com.gmail.gabow95k.beersoftheworld.ui.login.view;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +25,7 @@ public class LogInFragment extends BaseFragment<LogInContract.Presenter, Fragmen
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         LogInInteractor interactor = new LogInInteractor();
-        presenter = new LogInPresenter(this, interactor);
+        presenter = new LogInPresenter(requireActivity(), this, interactor);
     }
 
     @Override
@@ -42,8 +44,62 @@ public class LogInFragment extends BaseFragment<LogInContract.Presenter, Fragmen
 
     private void setUpEvents() {
 
+        binding.etUser.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!s.toString().isEmpty())
+                    binding.etUser.setError(null);
+            }
+        });
+
+        binding.etPassword.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!s.toString().isEmpty())
+                    binding.etPassword.setError(null);
+            }
+        });
+
+        binding.btnLogin.setOnClickListener(v ->
+                presenter.logIn(
+                        binding.etUser.getEditText().getText().toString().trim(),
+                        binding.etPassword.getEditText().getText().toString().trim())
+
+        );
+
         binding.btnRecoverPass.setOnClickListener(v -> addFragment(new ResetFragment(), R.id.contentSession));
 
         binding.btnGoSignup.setOnClickListener(v -> addFragment(new SignUpFragment(), R.id.contentSession));
+    }
+
+    @Override
+    public void userError(String message) {
+        binding.etUser.setError(message);
+    }
+
+    @Override
+    public void passwordError(String message) {
+        binding.etPassword.setError(message);
+    }
+
+    @Override
+    public void success(String message) {
+        showSuccessSnackBar(binding.getRoot(), message);
     }
 }
