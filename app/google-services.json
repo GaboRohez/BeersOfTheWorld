@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "909245260995",
+    "project_id": "beersoftheworld-23f94",
+    "storage_bucket": "beersoftheworld-23f94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909245260995:android:6e87f47009ba855cb2ee76",
+        "android_client_info": {
+          "package_name": "com.gmail.gabow95k.beersoftheworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909245260995-ckg81dq5jv9mh2eltqpagmic3bkjv0et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-LfwC34u9FVRSypK5jjfEIkDS2SCslVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909245260995-ckg81dq5jv9mh2eltqpagmic3bkjv0et.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,4 +11,16 @@
     <string name="sign_up">Crear cuenta</string>
     <string name="retrofit_timeout">Por el momento el servicio no esta disponible, intente de nuevo</string>
     <string name="retrofit_failure">El tiempo de espera fue exedido, por favor, intente la petición</string>
+    <string name="register">Register</string>
+    <string name="my_information">My information</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password_title">Password</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept">Accept</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="empty_field">The field cannot be sent empty.</string>
+    <string name="password_not_same">Password confirmation is not the same</string>
+    <string name="common_error">An error occurred, please try again later</string>
+    <string name="user_created">User created successfully</string>
 </resources>

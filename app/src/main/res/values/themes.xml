@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.BeersOfTheWorld" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.BeersOfTheWorld" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/orange</item>
         <item name="colorPrimaryVariant">@color/white</item>
@@ -18,6 +18,6 @@
     <style name="TextInputLayoutOutline" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/text_input_box_stroke</item>
         <item name="android:textColor">@color/gray</item>
-        <item name="passwordToggleTint">@color/orange_dark</item>
+        <item name="passwordToggleTint">@color/purple_light</item>
     </style>
 </resources>

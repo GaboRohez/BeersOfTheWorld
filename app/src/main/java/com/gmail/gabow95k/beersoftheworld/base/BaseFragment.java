@@ -8,6 +8,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewbinding.ViewBinding;
 
+import com.gmail.gabow95k.beersoftheworld.R;
+import com.google.android.material.snackbar.Snackbar;
+
 public abstract class BaseFragment<T, B extends ViewBinding> extends Fragment implements BaseView {
     protected T presenter;
     protected B binding;
@@ -18,16 +21,15 @@ public abstract class BaseFragment<T, B extends ViewBinding> extends Fragment im
     }
 
     protected void addFragment(Fragment fragment, int id) {
-        getChildFragmentManager().beginTransaction()
-                .add(id, fragment, fragment.getTag())
-                .addToBackStack(fragment.getTag())
-                .commitAllowingStateLoss();
+        if (getActivity() instanceof BaseActivity) {
+            ((BaseActivity<?>) getActivity()).addFragment(fragment, id);
+        }
     }
 
-    protected void setFragment(Fragment fragment, int id) {
-        getChildFragmentManager().beginTransaction()
-                .replace(id, fragment, fragment.getTag())
-                .commit();
+    protected void popBackStack() {
+        if (getActivity() instanceof BaseActivity) {
+            ((BaseActivity<?>) getActivity()).popBackStack();
+        }
     }
 
     @Override
@@ -48,5 +50,9 @@ public abstract class BaseFragment<T, B extends ViewBinding> extends Fragment im
     @Override
     public void showErrorDialog(int resourceId) {
 
+    }
+
+    public void showSuccessSnackBar(View view, String message) {
+        Snackbar.make(view, message, Snackbar.LENGTH_LONG).setBackgroundTint(requireContext().getColor(R.color.colorGreenSuccess)).show();
     }
 }
