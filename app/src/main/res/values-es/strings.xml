@@ -28,8 +28,11 @@
     <string name="message_to_recover_pass">Se enviará un enlace a su correo electrónico para restablecer su contraseña</string>
     <string name="send">Enviar</string>
     <string name="request_confirmed">Solicitud confirmada</string>
-    <string name="invalid_email">Email is invalid</string>
-    <string name="invalid_user">Username does not exist</string>
-    <string name="wait_a_moment">Wait a moment...</string>
-    <string name="success">Success!</string>
+    <string name="invalid_email">El email es invalido</string>
+    <string name="invalid_user">El usuario no existe</string>
+    <string name="wait_a_moment">Espera un momento…</string>
+    <string name="success">Éxito!</string>
+    <string name="welcome">Bienvenido %s!</string>
+    <string name="search">Search</string>
+    <string name="no_available">No available</string>
 </resources>

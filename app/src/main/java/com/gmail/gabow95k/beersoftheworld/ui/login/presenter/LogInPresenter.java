@@ -4,9 +4,9 @@ import android.app.Activity;
 
 import androidx.annotation.NonNull;
 
-import com.gmail.gabow95k.beersoftheworld.Constants.Constants;
 import com.gmail.gabow95k.beersoftheworld.app.BeerApp;
 import com.gmail.gabow95k.beersoftheworld.base.BasePresenter;
+import com.gmail.gabow95k.beersoftheworld.constants.Constants;
 import com.gmail.gabow95k.beersoftheworld.data.preferences.PreferencesManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;

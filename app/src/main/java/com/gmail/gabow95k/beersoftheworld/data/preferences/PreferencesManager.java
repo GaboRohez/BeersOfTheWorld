@@ -3,7 +3,7 @@ package com.gmail.gabow95k.beersoftheworld.data.preferences;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.gmail.gabow95k.beersoftheworld.Constants.Constants;
+import com.gmail.gabow95k.beersoftheworld.constants.Constants;
 
 public class PreferencesManager {
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.beers.view.BeersFragment">
+
+    <EditText
+        android:id="@+id/etSearch"
+        style="@style/EditTextSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/dimen16"
+        android:drawableEnd="@drawable/ic_search"
+        android:hint="@string/search"
+        android:singleLine="true"
+        android:textSize="@dimen/mediumSize" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_below="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen8"
+        android:background="@color/colorBackgroundContent"
+        android:padding="@dimen/dimen8"
+        tools:listitem="@layout/item_beer" />
+
+    <TextView
+        android:id="@+id/tvNoAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_available"
+        android:textSize="@dimen/bigSize"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        tools:visibility="visible" />
+
+</RelativeLayout>

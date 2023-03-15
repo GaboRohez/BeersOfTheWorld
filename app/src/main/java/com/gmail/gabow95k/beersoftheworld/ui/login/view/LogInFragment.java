@@ -1,5 +1,6 @@
 package com.gmail.gabow95k.beersoftheworld.ui.login.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,7 +13,10 @@ import androidx.annotation.Nullable;
 
 import com.gmail.gabow95k.beersoftheworld.R;
 import com.gmail.gabow95k.beersoftheworld.base.BaseFragment;
+import com.gmail.gabow95k.beersoftheworld.constants.Constants;
+import com.gmail.gabow95k.beersoftheworld.data.preferences.PreferencesManager;
 import com.gmail.gabow95k.beersoftheworld.databinding.FragmentLoginBinding;
+import com.gmail.gabow95k.beersoftheworld.ui.DashboardActivity;
 import com.gmail.gabow95k.beersoftheworld.ui.login.interactor.LogInInteractor;
 import com.gmail.gabow95k.beersoftheworld.ui.login.presenter.LogInContract;
 import com.gmail.gabow95k.beersoftheworld.ui.login.presenter.LogInPresenter;
@@ -26,6 +30,10 @@ public class LogInFragment extends BaseFragment<LogInContract.Presenter, Fragmen
         super.onCreate(savedInstanceState);
         LogInInteractor interactor = new LogInInteractor();
         presenter = new LogInPresenter(requireActivity(), this, interactor);
+
+        if (PreferencesManager.getInstance().getBoolean(Constants.LOGIN_KEY_PREFS)) {
+            openDashboard();
+        }
     }
 
     @Override
@@ -101,5 +109,12 @@ public class LogInFragment extends BaseFragment<LogInContract.Presenter, Fragmen
     @Override
     public void success(String message) {
         showSuccessSnackBar(binding.getRoot(), message);
+        openDashboard();
+    }
+
+    private void openDashboard() {
+        Intent intent = new Intent(requireActivity(), DashboardActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }

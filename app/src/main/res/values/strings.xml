@@ -33,4 +33,7 @@
     <string name="invalid_user">Username does not exist</string>
     <string name="wait_a_moment">Wait a moment...</string>
     <string name="success">Success!</string>
+    <string name="welcome">Welcome %s!</string>
+    <string name="search">Search</string>
+    <string name="no_available">No available</string>
 </resources>
